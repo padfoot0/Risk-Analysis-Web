@@ -40,11 +40,10 @@
     <main>
 
         <div id="wrapper">
-
             <div class="content-wrapper">
                 <div class="content custom-scrollbar">
 
-                    <div id="login" class="p-8">
+                    <div id="register" class="p-8">
 
                         <div class="form-wrapper md-elevation-8 p-8">
 
@@ -52,52 +51,39 @@
                                 <span>F</span>
                             </div>
 
-                            <div class="title mt-4 mb-8">Log in to your account</div>
+                            <div class="title mt-4 mb-8">Create an account</div>
 
-                            <form name="loginForm"  method = 'POST' action = '/' novalidate>
+                            <form name="registerForm"  action = '/register' method = 'POST' novalidate>
 
                                 <div class="form-group mb-4">
-                                    <input type="text" name = 'empId' class="form-control" id="loginFormInputEmail" aria-describedby="emailHelp" placeholder=" " />
-                                    <label for="loginFormInputEmail">Employ Id</label>
+                                    <input type="text" name = 'name' class="form-control" id="registerFormInputName" aria-describedby="nameHelp" />
+                                    <label for="registerFormInputName">Name</label>
                                 </div>
 
                                 <div class="form-group mb-4">
-                                    <input type="password" name = 'password' class="form-control" id="loginFormInputPassword" placeholder="Password" />
-                                    <label for="loginFormInputPassword">Password</label>
+                                    <input type="text" name = 'eId' class="form-control" id="registerFormInputEmail" aria-describedby="emailHelp" />
+                                    <label for="registerFormInputEmail">Employ Id</label>
                                 </div>
 
-                                <div class="remember-forgot-password row no-gutters align-items-center justify-content-between pt-4">
+                                <div class="form-group mb-4">
+                                    <input type="password" name = 'password' class="form-control" id="registerFormInputPassword" />
+                                    <label for="registerFormInputPassword">Password</label>
+                                </div>
 
-                                    <a href="#" class="forgot-password text-secondary mb-4">Forgot Password?</a>
+                                <div class="form-group mb-4">
+                                    <input type="password" name = 'password1' class="form-control" id="registerFormInputPasswordConfirm" />
+                                    <label for="registerFormInputPasswordConfirm">Password (Confirm)</label>
                                 </div>
 
                                 <button type="submit" class="submit-button btn btn-block btn-secondary my-4 mx-auto" aria-label="LOG IN">
-                                    LOG IN
+                                    CREATE MY ACCOUNT
                                 </button>
 
                             </form>
 
-                            <div class="separator">
-                                <span class="text">OR</span>
-                            </div>
-
-                            <button type="submit" class="google btn btn-block btn-secondary my-2 mx-auto" aria-label="LOG IN">
-                                <span>
-                                    <i class="icon-google-plus s-4"></i>
-                                    <span>Log in with Google</span>
-                                </span>
-                            </button>
-
-                            <button type="submit" class="facebook btn btn-block btn-secondary my-2 mx-auto" aria-label="LOG IN">
-                                <span>
-                                    <i class="icon-facebook s-4"></i>
-                                    <span>Log in with Facebook</span>
-                                </span>
-                            </button>
-
-                            <div class="register d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
-                                <span class="text mr-sm-2">Don't have an account?</span>
-                                <a class="link text-secondary" href="templates/register.html">Create an account</a>
+                            <div class="login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
+                                <span class="text mr-sm-2">Already have an account?</span>
+                                <a class="link text-secondary" href="/">Log in</a>
                             </div>
 
                         </div>
