@@ -139,4 +139,20 @@ def displayDatas(companyName , displayType):
 
 # displayDatas(companyName , displayType)
 
+def loginDetails(emId , password):
+       q1 = "select * from employDetail where eId = %s"
+       mycursor.execute(q1, (emId,))
+       myresult = mycursor.fetchall()
+       if len(myresult) != 0 and myresult[0][2] == password:
+            return True
+       else:
+           return False
 
+       
+
+def registerDetail(name , eId , password):
+    q4 = "INSERT INTO employDetail (name , eId, password) VALUES (%s , %s , %s)"
+    valueTuple = (name , eId,password)
+    mycursor.execute(q4 , valueTuple)
+    mydb.commit()
+    print("data Inserted")
