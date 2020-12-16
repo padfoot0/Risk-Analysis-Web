@@ -15,24 +15,24 @@ import pandas as pd
 def home():
     return render_template("index.html")
 
-# @app.route('/', methods=["GET","POST"])
-# def searchFormate():
-#      type = request.form["getValue"]
-#      print(type)
-#      if type == "single":
-#          return render_template("index.html")
-#      elif type == "csv":
-#          return render_template("takeInputCsvFile.html")
-#      elif type == "display":
-#          return  render_template("displaydata.html")
-#      else:
-#          return "Select right Input"
+@app.route('/', methods=["GET","POST"])
+def searchFormate():
+     type = request.form["getValue"]
+     print(type)
+     if type == "single":
+         return render_template("index.html")
+     elif type == "csv":
+         return render_template("takeInputCsvFile.html")
+     elif type == "display":
+         return  render_template("displaydata.html")
+     else:
+         return "Select right Input"
 
 @app.route('/single', methods = ["GET", "POST"])
 def CompanyName():
     companyName = request.form["companyName"]
     print(companyName)
-    # finalAlgorithm(companyName)
+    finalAlgorithm(companyName)
     return companyName
 
 @app.route('/filecsv' , methods = ['GET' , 'POST'])
@@ -43,7 +43,7 @@ def csvFile():
         arr = data.to_numpy()
         print(data.head())
         print(arr)
-        # multipleCompany(arr)
+        multipleCompany(arr)
         return "wha"
     else:
         return "wrong "
