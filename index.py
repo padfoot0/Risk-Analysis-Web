@@ -6,16 +6,28 @@ from getPredictions import getPredictions
 import connection
 from connection import finalAlgorithm
 from connection import displayDatas
-from connection import multipleCompany
+from connection import multipleCompany,loginDetails
 import pdfkit
 import os
 import pandas as pd
 
+
 @app.route('/')
 def home():
-    return render_template("main.html")
+    return render_template("index.html")
 
-@app.route('/', methods=["GET","POST"])
+
+@app.route('/' , methods = ['GET' , 'POST'])
+def login():
+    emId = request.form['empId']
+    password = request.form['password']
+    result = loginDetails(emId , password)
+    if result == False:
+        return "False"
+    else:
+        return  render_template('main.html')
+
+@app.route('/mainpage', methods=["GET","POST"])
 def searchFormate():
      type = request.form["getValue"]
      print(type)
