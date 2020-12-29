@@ -1,21 +1,27 @@
-<!DOCTYPE html>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../static/css/login.css">
-    </head>
-    <body>
-    <div class = 'loginform' >
+    {% extends 'base.html' %}
 
-        <input type = 'text' name = 'employid' placeholder = 'Employ Id' /><br><br>
-        <input type = 'password' name = 'password' placeholder = '*********' /><br><br>
-        <button type = 'submit'> LogIn</button>
-        </div>
-        <script src="" async defer></script>
-    </body>
-</html>
+
+    
+    {% block body%} 
+        <div class="box">
+	        <form action  = "/" method = "POST" >
+		        <span class="text-center">Login</span>
+
+	        <div class="input-container">		
+		        <input type="text" name = "empId" required=""/>
+		        <label>Employ Id </label>
+	         </div>
+            <div class="input-container">		
+		        <input type="password" name = "password" required=""/>
+		        <label>Password </label>
+	         </div>
+
+		    <button type="submit" class="btn">Login</button>
+        </form>	
+
+        <p class = "lastText" >Create New Account <a href ="/signup">Signup</a></p>
+    </div>
+        
+        
+ {% endblock %} 

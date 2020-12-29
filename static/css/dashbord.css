@@ -1,0 +1,10 @@
+.header{
+
+    transform: translate(250px, 10px);
+    font-size: 150px;
+}
+
+.showDetails{
+
+    transform: translate(280px, 20px);
+}

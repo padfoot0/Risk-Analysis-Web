@@ -1,0 +1,42 @@
+
+   .box {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    size:600px;
+  }
+    
+select {
+    background-color: rgb(138, 36, 18);
+    color: white;
+    padding: 12px;
+    width: 150px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  } 
+  .inputodd {
+    padding: 12px;
+    font-size: 17px;
+    border: 2px solid rgb(138, 36, 18);
+    width: 300px;
+    background: #f1f1f1;
+  }
+   
+  .buttonodd {
+    width: 60px;
+    padding: 14px;
+    background: rgb(138, 36, 18);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  .buttonodd:hover {
+    background: rgb(138, 36, 18);
+  }

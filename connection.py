@@ -148,7 +148,6 @@ def loginDetails(emId , password):
        else:
            return False
 
-       
 
 def registerDetail(name , eId , password):
     q4 = "INSERT INTO employDetail (name , eId, password) VALUES (%s , %s , %s)"
@@ -156,3 +155,16 @@ def registerDetail(name , eId , password):
     mycursor.execute(q4 , valueTuple)
     mydb.commit()
     print("data Inserted")
+
+
+def allCompanySearched():
+       q1 = "select companyName from PreviousCompanyDetails"
+       mycursor.execute(q1)
+       myresult = mycursor.fetchall()
+       return myresult
+
+def selectNameOfUser(empId):
+       q1 = "select name from employDetail where eId = %s"
+       mycursor.execute(q1, (empId,))
+       myresult = mycursor.fetchall()
+       return myresult
