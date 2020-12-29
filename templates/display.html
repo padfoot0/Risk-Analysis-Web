@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype <!DOCTYPE html>
 
 <html>
     <head>
@@ -9,7 +9,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{url_for('static' , filename = 'css/indexmain.css')}}">
          <link rel="stylesheet" href="{{url_for('static' , filename = 'css/nevbarVertical.css')}}">
-    </head> 
+          <link rel="stylesheet" href="{{url_for('static' , filename = 'css/display.css')}}">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
     <body>
         <div class="topnav" id="myTopnav">
         <a href="/logout" class = "active">Logout</a>
@@ -22,13 +25,20 @@
             <a href="/csv">Upload Csv File</a>
             <a href="/display">Display</a>
         </div>
-        <div class = "header" style = "position:absolute; top:100px; left:300px; font-size:50px;">Dashboard</div>
-            <div class = "showDetails" style = "position:absolute; top:150px; left:350px; font-size:30px;">
-            <ol>
-                {%for i in range(0, companyNo)%}
-                    <li>{{company[0][i]}}</li>
-                {%endfor%}
-            </ol>
+
+        <div class="box">
+            <form action  =  "/display" method = "POST" >
+         <select name = "displayFormate">
+            <option value = "bribery">bribery</option>
+            <option value = "corruption">corruption</option>
+            <option value = "defamation">defamation</option>
+            <option value = "fraud" >fraud</option>
+            <option value = "scam" >scam</option>
+        </select>
+
+          <input type="text" class = "inputodd" placeholder="Search.." name="companyName">
+          <button type="submit" class = "buttonodd" ><i class="fa fa-search"></i></button>
+          </form>
     </div>
     </body>
 </html>

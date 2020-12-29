@@ -1,0 +1,32 @@
+.verticalNevBar{
+
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(2, 1, 29);
+  overflow-x: hidden;
+  padding-top: 20px;
+  top:75px;
+}
+
+.verticalNevBar a{
+
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fbfbfb;
+  display: block;
+}
+
+.verticalNevBar a:hover{
+
+  color: rgb(138, 36, 18);
+}
+
+.verticalNevBar a .active{
+
+  color: rgb(138, 36, 18);
+}
