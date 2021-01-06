@@ -2,9 +2,9 @@ from flask import Flask , render_template , request , make_response , session , 
 from flask.wrappers import Response
 app= Flask(__name__)
 app.secret_key = "kaaeret"
-import getPredictions
+# import getPredictions
 from getPredictions import getPredictions
-import connection
+# import connection
 from connection import finalAlgorithm
 from connection import displayDatas
 from connection import multipleCompany,loginDetails,registerDetail,allCompanySearched,selectNameOfUser
